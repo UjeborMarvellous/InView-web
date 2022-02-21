@@ -17,3 +17,13 @@ label#logo {
 *{
   background-color: #14141b;
 }
+@media only screen and (max-width:780px) {
+  #text-white {
+    margin-right: auto;
+  }
+    
+    .flex{
+    flex: none;
+
+  }
+}

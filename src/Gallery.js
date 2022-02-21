@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './gallery.css';
+import {GrClose} from "react-icons/gr"
 import  Img1  from './img/2.jpg';
 import  Img2  from './img/3.jpg';
 import  Img3  from './img/4.jpg';
@@ -45,18 +46,30 @@ const Gallery = () => {
             imgSrc: Img8,
         },
     ]
+        const [model, setModel] = useState(false);
+        const [tempimgSrc, setTempImgSrc] = useState('')
 
-    return ( 
-        <div className="gallery mx-16">
-            {data.map((item, index)=>{
-                return(
-                    <div className="pics" key={index}>
-                        <img src={item.imgSrc} alt="" className='w-full'/>
-                    </div>
-                )
-            })}
+        const getImg = (imgSrc) =>{
+            setTempImgSrc(imgSrc);
+            setModel(true);
+        }
+    return (
+        <>
+            <div className={model ? "model open" : "model w-full h-screen fixed top-0 left-0 flex justify-center items-center"}>
+                <img src={tempimgSrc} />
+                <GrClose className='text-white'/>
+            </div>
+            <div className="gallery">
+                {data.map((item, index) => {
+                    return (
+                        <div className="pics" key={index} onClick={() => getImg(item.imgSrc)}>
+                            <img src={item.imgSrc} alt="" className='w-full' />
+                        </div>
+                    );
+                })}
 
-        </div>
+            </div>
+        </>
      );
 }
  
