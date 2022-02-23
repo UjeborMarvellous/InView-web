@@ -9,6 +9,7 @@ import  Img5  from './img/6.jpg';
 import  Img6  from './img/7.jpg';
 import  Img7  from './img/8.jpg';
 import  Img8  from './img/9.jpg';
+import  Img9  from './img/1.jpg';
 
 
 const Gallery = () => {
@@ -45,6 +46,10 @@ const Gallery = () => {
             id: 8,
             imgSrc: Img8,
         },
+        {
+            id: 9,
+            imgSrc: Img9,
+        },
     ]
         const [model, setModel] = useState(false);
         const [tempimgSrc, setTempImgSrc] = useState('')
@@ -57,7 +62,7 @@ const Gallery = () => {
         <>
             <div className={model ? "model open" : "model w-full h-screen fixed top-0 left-0 flex justify-center items-center"}>
                 <img src={tempimgSrc} />
-                <GrClose className='text-white'/>
+                <GrClose className='text-white' onClick={() => setModel(false)}/>
             </div>
             <div className="gallery">
                 {data.map((item, index) => {

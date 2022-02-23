@@ -14,16 +14,25 @@ label#logo {
   line-height: 11.875rem;
 } 
 
-*{
+.name {
   background-color: #14141b;
 }
 @media only screen and (max-width:780px) {
   #text-white {
+    margin-left: auto;
     margin-right: auto;
   }
     
-    .flex{
-    flex: none;
-
+    #flex{
+    display: none;
+  }
+  label#logo {
+    padding: none;
+  } 
+  .pl-24{
+    padding-left: 0;
+  }
+  .pr-24{
+    padding-right: 0;
   }
 }
