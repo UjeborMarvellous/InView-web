@@ -9,12 +9,11 @@ import {BiUser} from "react-icons/bi"
 const Nav = () => {
 
     return ( 
-        <nav className="name">
-            {/* <img src={img1} alt="loading..." className="w-full absolute" /> */}
+        <nav className="bg-black">
             <div className="pb-4 ml-8 mr-8" >
                 {/* firstnav */}
                 <div className="nav1 flex">
-                    <ul className=" mr-auto flex space-x-10 sm:space-x-20 overflow-x-scroll scrollbar-hide" id="flex">
+                    <ul className=" mr-auto flex space-x-10 sm:space-x-20 overflow-x-scroll scrollbar-hide" id="flexed">
                         <a href="" className="text-white text-xl ml-16 pt-4 hover:text-yelloe-700 hover:text-4xl"><FaHome/></a>
                         <a href="" className="text-white text-xl ml-16 pt-4 hover:text-yelloe-700 hover:text-4xl"><RiFlashlightLine/></a>
                         <a href="" className="text-white text-xl ml-16 pt-4 hover:text-yelloe-700 hover:text-4xl"><AiOutlineCheckCircle/></a>
