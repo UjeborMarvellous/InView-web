@@ -37,7 +37,6 @@
     } 
     
 }
-/* model */
 .model {
     background: #14141b;
     transition: opacity .4s ease,visibility .4s ease, trannsform .5s ease-in-out;
